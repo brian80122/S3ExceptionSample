@@ -33,10 +33,9 @@ namespace S3ExceptionSample
         public Task Test(string filePath)
         {
             AmazonS3Config config = new AmazonS3Config();
-            config.ServiceURL = "s3.amazonaws.com";//amazon s3 URL                            
+            config.ServiceURL = "s3.amazonaws.com";                        
             config.UseHttp = true;
-            config.RegionEndpoint = Amazon.RegionEndpoint.APNortheast1;//your region
-
+            config.RegionEndpoint = Amazon.RegionEndpoint.APNortheast1;
             AmazonS3Client client = new AmazonS3Client("AK",
                 "SK", config);
 
@@ -44,10 +43,9 @@ namespace S3ExceptionSample
 
             TransferUtilityUploadRequest request = new TransferUtilityUploadRequest();
             request.BucketName = "BucketName";
-            request.FilePath = filePath;//local file path 
+            request.FilePath = filePath;
             request.Key = "tmp/test.png";
             request.CannedACL = S3CannedACL.PublicRead;
-            //Test that the path is correct
 
             System.Threading.CancellationToken canellationToken = new System.Threading.CancellationToken();
             return transferUtility.UploadAsync(request, canellationToken);
