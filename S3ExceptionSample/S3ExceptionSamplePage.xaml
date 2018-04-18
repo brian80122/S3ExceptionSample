@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:S3ExceptionSample" x:Class="S3ExceptionSample.S3ExceptionSamplePage">
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="50">
+        <Label Text="S3ExceptionSample" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Button BackgroundColor="Gray" x:Name="btnOpenAlbum" Text="OpenAlbum"></Button>
+        <Image x:Name="disImage"></Image>
+    </StackLayout>
+</ContentPage>
